@@ -1,0 +1,105 @@
+
+========================================
+     BASIC STAR PATTERN PROGRAMS IN C
+========================================
+
+Description:
+Practising different star patterns using
+nested loops and column conditions.
+
+Patterns Covered:
+1. Square Star Pattern
+2. Right-Angled Triangle
+3. Inverted Triangle
+4. Increasing Star Pattern
+
+Language: C
+========================================
+
+
+#include <stdio.h>
+
+#include <stdio.h>
+
+int main()
+{
+    int n, row, col;
+    scanf("%d", &n);
+
+    // 1. Square Star Pattern
+    printf("\n1. Square Star Pattern\n");
+    for(row = 0; row < n; row++)
+    {
+        for(col = 0; col < n; col++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    // 2. Right-Angled Triangle Pattern
+    printf("\n2. Right-Angled Triangle Pattern\n");
+    for(row = 0; row < n; row++)
+    {
+        for(col = 0; col <= row; col++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    // 3. Inverted Triangle Pattern
+    printf("\n3. Inverted Triangle Pattern\n");
+    for(row = 0; row < n; row++)
+    {
+        for(col = 0; col < n - row; col++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    // 4. Increasing Star Pattern
+    printf("\n4. Increasing Star Pattern\n");
+    for(row = 0; row < n; row++)
+    {
+        for(col = 0; col < 2 * row - 1; col++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+/*
+SAMPLE INPUT:
+4
+
+SAMPLE OUTPUT:
+
+1. Square Star Pattern
+* * * *
+* * * *
+* * * *
+* * * *
+
+2. Right-Angled Triangle Pattern
+*
+* *
+* * *
+* * * *
+
+3. Inverted Triangle Pattern
+* * * *
+* * *
+* *
+*
+
+4. Increasing Star Pattern
+
+* *
+* * * *
+* * * * * *
+* * * * * * * *
