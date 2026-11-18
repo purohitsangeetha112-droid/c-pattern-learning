@@ -1,23 +1,9 @@
-
-========================================
-     BASIC STAR PATTERN PROGRAMS IN C
-========================================
-
-Description:
-Practising different star patterns using
-nested loops and column conditions.
-
-Patterns Covered:
-1. Square Star Pattern
-2. Right-Angled Triangle
-3. Inverted Triangle
-4. Increasing Star Pattern
-
-Language: C
-========================================
-
-
-#include <stdio.h>
+/*
+==================================================
+       C PROGRAMMING - PATTERN COLLECTION
+                  PATTERNS 1 TO 13
+==================================================
+*/
 
 #include <stdio.h>
 
@@ -26,47 +12,157 @@ int main()
     int n, row, col;
     scanf("%d", &n);
 
-    // 1. Square Star Pattern
-    printf("\n1. Square Star Pattern\n");
-    for(row = 0; row < n; row++)
+    // 1. SQUARE STAR PATTERN
+    printf("\n1. SQUARE STAR PATTERN\n");
+
+    for(row=0; row<n; row++)
     {
-        for(col = 0; col < n; col++)
-        {
+        for(col=0; col<n; col++)
             printf("* ");
-        }
         printf("\n");
     }
 
-    // 2. Right-Angled Triangle Pattern
-    printf("\n2. Right-Angled Triangle Pattern\n");
-    for(row = 0; row < n; row++)
+    // 2. RIGHT-ANGLED TRIANGLE
+    printf("\n2. RIGHT-ANGLED TRIANGLE\n");
+
+    for(row=0; row<n; row++)
     {
-        for(col = 0; col <= row; col++)
-        {
+        for(col=0; col<=row; col++)
             printf("* ");
-        }
         printf("\n");
     }
 
-    // 3. Inverted Triangle Pattern
-    printf("\n3. Inverted Triangle Pattern\n");
-    for(row = 0; row < n; row++)
+    // 3. INVERTED TRIANGLE
+    printf("\n3. INVERTED TRIANGLE\n");
+
+    for(row=0; row<n; row++)
     {
-        for(col = 0; col < n - row; col++)
-        {
+        for(col=0; col<n-row; col++)
             printf("* ");
-        }
         printf("\n");
     }
 
-    // 4. Increasing Star Pattern
-    printf("\n4. Increasing Star Pattern\n");
-    for(row = 0; row < n; row++)
+    // 4. INCREASING STAR PATTERN
+    printf("\n4. INCREASING STAR PATTERN\n");
+
+    for(row=0; row<n; row++)
     {
-        for(col = 0; col < 2 * row - 1; col++)
-        {
+        for(col=0; col<=2*row-1; col++)
             printf("* ");
-        }
+        printf("\n");
+    }
+
+    // 5. RIGHT-SHIFTED SQUARE PATTERN
+    printf("\n5. RIGHT-SHIFTED SQUARE PATTERN\n");
+
+    for(row=0; row<n; row++)
+    {
+        for(col=0; col<=row-1; col++)
+            printf(" ");
+
+        for(col=0; col<=n; col++)
+            printf("*");
+
+        printf("\n");
+    }
+
+    // 6. SQUARE PATTERN WITH DECREASING SPACES
+    printf("\n6. SQUARE PATTERN WITH DECREASING SPACES\n");
+
+    for(row=0; row<n; row++)
+    {
+        for(col=0; col<n-row-2; col++)
+            printf(" ");
+
+        for(col=0; col<=n; col++)
+            printf("*");
+
+        printf("\n");
+    }
+
+    // 7. RIGHT-ALIGNED INCREASING TRIANGLE
+    printf("\n7. RIGHT-ALIGNED INCREASING TRIANGLE\n");
+
+    for(row=0; row<n; row++)
+    {
+        for(col=0; col<n-row-1; col++)
+            printf(" ");
+
+        for(col=0; col<=row; col++)
+            printf("*");
+
+        printf("\n");
+    }
+
+    // 8. DOUBLE-SIDED INCREASING STAR PATTERN
+    printf("\n8. DOUBLE-SIDED INCREASING STAR PATTERN\n");
+
+    for(row=0; row<n; row++)
+    {
+        for(col=0; col<=row; col++)
+            printf("*");
+
+        for(col=0; col<n-row-1; col++)
+            printf(" ");
+
+        for(col=0; col<=row; col++)
+            printf("*");
+
+        printf("\n");
+    }
+
+    // 9. SQUARE NUMBER PATTERN
+    printf("\n9. SQUARE NUMBER PATTERN\n");
+
+    for(row=0; row<n; row++)
+    {
+        for(col=0; col<n; col++)
+            printf("1");
+
+        printf("\n");
+    }
+
+    // 10. ROW NUMBER PATTERN
+    printf("\n10. ROW NUMBER PATTERN\n");
+
+    for(row=0; row<n; row++)
+    {
+        for(col=0; col<n; col++)
+            printf("%d", row+1);
+
+        printf("\n");
+    }
+
+    // 11. COLUMN NUMBER PATTERN
+    printf("\n11. COLUMN NUMBER PATTERN\n");
+
+    for(row=0; row<n; row++)
+    {
+        for(col=0; col<n; col++)
+            printf("%d", col+1);
+
+        printf("\n");
+    }
+
+    // 12. INCREASING NUMBER TRIANGLE
+    printf("\n12. INCREASING NUMBER TRIANGLE\n");
+
+    for(row=0; row<n; row++)
+    {
+        for(col=0; col<=row; col++)
+            printf("%d", col+1);
+
+        printf("\n");
+    }
+
+    // 13. DECREASING NUMBER TRIANGLE
+    printf("\n13. DECREASING NUMBER TRIANGLE\n");
+
+    for(row=0; row<=n; row++)
+    {
+        for(col=0; col<=n-row; col++)
+            printf("%d", col+1);
+
         printf("\n");
     }
 
@@ -74,32 +170,94 @@ int main()
 }
 
 /*
-SAMPLE INPUT:
+==================================================
+                 SAMPLE INPUT
+==================================================
+
 4
 
-SAMPLE OUTPUT:
+==================================================
+                 SAMPLE OUTPUT
+==================================================
 
-1. Square Star Pattern
+1. SQUARE STAR PATTERN
 * * * *
 * * * *
 * * * *
 * * * *
 
-2. Right-Angled Triangle Pattern
+2. RIGHT-ANGLED TRIANGLE
 *
 * *
 * * *
 * * * *
 
-3. Inverted Triangle Pattern
+3. INVERTED TRIANGLE
 * * * *
 * * *
 * *
 *
 
-4. Increasing Star Pattern
+4. INCREASING STAR PATTERN
 
 * *
 * * * *
 * * * * * *
-* * * * * * * *
+
+5. RIGHT-SHIFTED SQUARE PATTERN
+*****
+ *****
+  *****
+   *****
+
+6. SQUARE PATTERN WITH DECREASING SPACES
+   *****
+  *****
+ *****
+*****
+
+7. RIGHT-ALIGNED INCREASING TRIANGLE
+   *
+  **
+ ***
+****
+
+8. DOUBLE-SIDED INCREASING STAR PATTERN
+*   *
+**  **
+*** ***
+********
+
+9. SQUARE NUMBER PATTERN
+1111
+1111
+1111
+1111
+
+10. ROW NUMBER PATTERN
+1111
+2222
+3333
+4444
+
+11. COLUMN NUMBER PATTERN
+1234
+1234
+1234
+1234
+
+12. INCREASING NUMBER TRIANGLE
+1
+12
+123
+1234
+
+13. DECREASING NUMBER TRIANGLE
+12345
+1234
+123
+12
+1
+
+==================================================
+*/
